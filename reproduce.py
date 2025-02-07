@@ -4,18 +4,16 @@ import os
 
 def run(commands, output_file="output.txt"):
     def run_command(command, output_file):
-        # 打开文件并将 stdout 和 stderr 重定向
+
         with open(output_file, "a") as f:
             subprocess.run(" ".join(command), shell=True, stdout=f, stderr=f)
-    
-    # 创建并启动线程
+
     threads = []
     for i,cmd in enumerate(commands):
         thread = threading.Thread(target=run_command, args=(cmd, output_file))
         threads.append(thread)
         thread.start()
 
-    # 等待所有线程结束
     for thread in threads:
         thread.join()
 
