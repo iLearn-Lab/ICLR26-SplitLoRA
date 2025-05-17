@@ -52,4 +52,4 @@ Please change the `root_dir` in each script to the path of the uncompressed data
 
 ## Training and evaluation
 
-For three datasets: `python repreduce.py`
+For three datasets: `python reproduce.py`

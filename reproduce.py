@@ -23,7 +23,7 @@ lr = 1e-3
 rank =  10
 gpu = 0
 alpha = 20 
-root_path = '/root/PAPER/VPTinNSforCL/data/' 
+root_path = './data/' 
 epoch = 10
 
 

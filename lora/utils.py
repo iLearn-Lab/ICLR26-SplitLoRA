@@ -152,7 +152,7 @@ class LoRALayer(torch.nn.Module):
             else:
                 random_coeffs = torch.randn(self.feature_list.shape[1],self.rank).to(self.lora_A[task_id].weight.device)
                 initialized_matrix = self.feature_list @ random_coeffs
-                initialized_matrix = initialized_matrix / initialized_matrix.norm() * self.lora_A[task_id].weight.data.norm()
+                initialized_matrix = initialized_matrix / initialized_matrix.norm() * self.lora_A[task_id].weight.data.norm() * (1/(self.task_id+1))
                 self.lora_A[task_id].weight.data.copy_(initialized_matrix.T)                
 
     def update_grad_after_train(self, task_id):
