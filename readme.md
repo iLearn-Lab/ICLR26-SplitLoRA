@@ -53,3 +53,9 @@ Please change the `root_dir` in each script to the path of the uncompressed data
 ## Training and evaluation
 
 For three datasets: `python reproduce.py`
+
+
+## Acknowledgement
+
+The code is developed based on https://github.com/zugexiaodui/VPTinNSforCL!
+We sincerely thank the authors for open-sourcing their code.
