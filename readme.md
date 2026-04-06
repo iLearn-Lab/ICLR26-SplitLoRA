@@ -1,4 +1,4 @@
-# ICLR26-P-M
+# ICLR26-SplitLoRA
 
 [ICLR 2026] Official Implementation for **SplitLoRA: Balancing Stability and Plasticity in Continual Learning Through Gradient Space Splitting**
 
