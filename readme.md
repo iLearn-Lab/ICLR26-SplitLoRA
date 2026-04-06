@@ -1,33 +1,68 @@
-# SplitLoRA: Balancing Stability and Plasticity in Continual Learning Through Gradient Space Splitting
+# ICLR26-P-M
 
-## Environment
-```
-torch==2.1.0
-torchvision==0.16.0
-timm==0.9.12
-einops==0.7.0
-ftfy==6.1.3
-huggingface-hub==0.18.0
-numpy==1.26.0
-opencv-python==4.8.1.78
-Pillow==10.0.1
-regex==2023.12.25
-scikit-image==0.22.0
-scikit-learn==1.3.2
-scipy==1.11.3
-tqdm==4.66.1
-```
-These packages can be installed easily by
-`pip install -r requirements.txt`
+[ICLR 2026] Official Implementation for **SplitLoRA: Balancing Stability and Plasticity in Continual Learning Through Gradient Space Splitting**
 
-## Dataset preparation
-### 1. Download the datasets and uncompress them:
+## Authors
+
+**Haomiao Qiu**<sup>1,2</sup>, **Miao Zhang**<sup>1</sup>\*, **Ziyue Qiao**<sup>2</sup>\*, **Weili Guan**<sup>1</sup>, **Min Zhang**<sup>1</sup>, **Liqiang Nie**<sup>1</sup>
+
+<sup>1</sup> `Harbin Institute of Technology (Shenzhen)`  
+<sup>2</sup> `Great Bay University`  
+\* Corresponding author
+
+## Links
+
+- **Paper**: [`Paper Link`](https://openreview.net/forum?id=Zm1hjXxRQV)
+- **Code Repository**: [`GitHub`](https://github.com/iLearn-Lab/NeurIPS25-SplitLoRA)
+
+
+---
+
+## Updates
+
+- [05/2025] Initial release
+
+---
+
+## Introduction
+
+ We  present SplitLoRA, a method for continual learning that combines orthogonal projection with LoRA. It improves the balance between plasticity and stability by effectively mitigating interference between new and old tasks. This repository provides the official implementation, train and evaluation scripts.
+
+---
+
+
+## Installation
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/iLearn-Lab/ICLR26-SplitLoRA.git
+cd ICLR26-SplitLoRA
+```
+
+### 2. Create environment
+
+```bash
+python -m venv .venv
+source .venv/bin/activate   # Linux / Mac
+# .venv\Scripts\activate    # Windows
+```
+
+### 3. Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+### 4. Dataset preparation
+#### Download the datasets and uncompress them:
 
 - CIFAR-100: https://www.cs.toronto.edu/~kriz/cifar.html
 - ImageNet-R: https://github.com/hendrycks/imagenet-r
 - DomainNet: https://ai.bu.edu/M3SDA/
 
-### 2. Rearrange the directory structure:
+#### Rearrange the directory structure:
 
 Directory structure for three datasets:
 ```
@@ -50,12 +85,42 @@ DATA_ROOT
 We provide the scripts `split_[dataset].py` in the `tools` folder to rearange the directory structure.
 Please change the `root_dir` in each script to the path of the uncompressed dataset.
 
-## Training and evaluation
+
+---
+
+## Usage
 
 For three datasets: `python reproduce.py`
 
 
+---
+
+
+## Citation
+
+
+```bibtex
+@article{qiu2025splitlora,
+  title={SplitLoRA: Balancing Stability and Plasticity in Continual Learning Through Gradient Space Splitting},
+  author={Qiu, Haomiao and Zhang, Miao and Qiao, Ziyue and Guan, Weili and Zhang, Min and Nie, Liqiang},
+  journal={arXiv preprint arXiv:2505.22370},
+  year={2025}
+}
+
+```
+
+---
+
 ## Acknowledgement
 
-The code is developed based on https://github.com/zugexiaodui/VPTinNSforCL!
-We sincerely thank the authors for open-sourcing their code.
+- Thanks to our supervisor and collaborators for valuable support.
+- The code is developed based on https://github.com/zugexiaodui/VPTinNSforCL! We sincerely thank the authors for open-sourcing their code.
+
+---
+
+## License
+
+This project is released under the Apache License 2.0.
+
+
+
